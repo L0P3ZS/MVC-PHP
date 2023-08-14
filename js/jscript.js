@@ -57,6 +57,23 @@ $(".boton").click(function() {
      
     });
 
+    $(document).ready(function() {
+        $('#guardar').click(function() {
+            // Excluir el campo datoExcluir del formulario
+            $("#formulario input[name='datoExcluir']").prop("disabled", true);
+    
+            var formData = $("#formulario").serialize();
+            $.ajax({
+                url: "../Controlador/appController.php",
+                type: "POST",
+                data: formData,
+            }).done(function() {
+                // Recargar la página después de que se haya completado la solicitud AJAX
+                location.reload();
+            });
+        });
+    });
+
 
 
 

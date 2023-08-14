@@ -5,7 +5,7 @@ include ('../modelo/mascota.php');
 
 $mascota = new mascotas("", "", ""); 
 
-if (isset($_POST['guardar'])) {
+if (isset($_POST['nombre']) && isset($_POST['raza'])) {
     $mascota->guardar();
     header("Location: ../vista/index.php"); 
     exit;

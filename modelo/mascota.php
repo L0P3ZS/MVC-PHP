@@ -37,8 +37,9 @@ class mascotas
     {
         $pdo = new Conexion();
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $sql = "INSERT INTO masc (nombre, raza) VALUES(:nombre, :raza )";
+            $sql = "INSERT INTO masc (id, nombre, raza) VALUES(:id, :nombre, :raza )";
             $stmt = $pdo->prepare($sql);
+            $stmt->bindValue(':id', $_POST['id']);
             $stmt->bindValue(':nombre', $_POST['nombre']);
             $stmt->bindValue(':raza', $_POST['raza']);
             $stmt->execute();

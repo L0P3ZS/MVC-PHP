@@ -1,6 +1,4 @@
-<?php
-include('../Controlador/appController.php');
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +32,7 @@ include('../Controlador/appController.php');
                 <div class="modal-body">
                     <form   method="post" id="formulario">
                     <div class="modal-data">
-                            <input type="hidden" id="id" name="id" >
+                            <input type="hidden" name="datoExcluir" id="id" name="id" >
                         </div>
                         <div class="modal-data">
                             <label for="name">Nombre:</label>
@@ -47,7 +45,7 @@ include('../Controlador/appController.php');
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary" name="guardar">Crear</button>
+                    <button type="submit" class="btn btn-primary" id="guardar">Crear</button>
                     <button  class="btn btn-warning " id="actualizar"  >actualizar</button>
                 </div>
                 </form>
@@ -55,38 +53,7 @@ include('../Controlador/appController.php');
         </div> 
     </div>
 
-    <!-- Tabla para mostrar Usuarios registrados -->
-    <div class="container mt-4">
-        <table class="table" id="table">
-            <thead class="table-dark">
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Raza</th>
-                    <th scope="col">Actualizar</th>
-                    <th scope="col">Eliminar</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($datosMascota as $mascota) : ?>
-                    <tr>
-                        <td scope="row" ><?= $mascota['id'] ?></td>
-                        <td ><?= $mascota['nombre'] ?></td>
-                        <td ><?= $mascota['raza'] ?></td>
-                        <th><button class="btn btn-outline-warning boton"  data-bs-toggle="modal" data-bs-target="#myModal" >actualizar</button></th>
-                        <th>
-                            <form action="../Controlador/appController.php" method="post">
-                                <input type="hidden" name="id" value="<?= $mascota['id'] ?>">
-                                <button type="submit" class="btn btn-outline-danger" name="eliminar">eliminar</button>
-                            </form>
-                        </th>
-                    </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
-    </div>
-    <br>
-<div id="respuesta"></div>
+   
 
 
    
