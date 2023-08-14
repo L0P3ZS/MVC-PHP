@@ -1,0 +1,108 @@
+.top{
+    top: 0;
+    height: 100vh;
+    background-color: rgba(0,0,0,.8);
+    display: grid;
+    place-items: center;
+    transition: .4s;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    max-width: 400px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .modal-data {
+    margin-bottom: 10px;
+  }
+  
+  .modal-data label {
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+  }
+  
+  .modal-data input {
+    width: 200px;
+    padding: 5px;
+  }
+
+  /* segundo modal */
+
+.custom-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .custom-modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    max-width: 400px;
+  }
+  
+  .custom-close {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .custom-modal-data {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .custom-modal-data label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .custom-modal-data input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .custom-modal button {
+    margin-top: 10px;
+  }
+  
