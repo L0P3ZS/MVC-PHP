@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <title>Document</title>
 </head>
 
@@ -30,9 +28,9 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form   method="post" id="formulario">
+                    <form method="POST" id="formulario">
                     <div class="modal-data">
-                            <input type="hidden" name="datoExcluir" id="id" name="id" >
+                            <input type="hidden"   name="datoExcluir" id="id" name="id" >
                         </div>
                         <div class="modal-data">
                             <label for="name">Nombre:</label>
@@ -45,15 +43,29 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary" id="guardar">Crear</button>
-                    <button  class="btn btn-warning " id="actualizar"  >actualizar</button>
+                    <button type="button" class="btn btn-primary guardar"  >guardar</button>
+                    <button type="button" class="btn btn-warning actualizar"  >Actualizar</button>
                 </div>
                 </form>
             </div>
         </div> 
     </div>
 
-   
+    <div class="container mt-4">
+        <table class="table" id="tabla_mascota">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Raza</th>
+                    <th scope="col">Actualizar</th>
+                    <th scope="col">Eliminar</th>
+                </tr>
+            </thead>
+            <tbody> 
+            </tbody>
+        </table>
+    </div>
 
 
    

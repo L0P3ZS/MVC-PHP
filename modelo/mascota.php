@@ -19,14 +19,8 @@ class mascotas
     public function listar()
     {
         $pdo = new Conexion();
-    
-        if (isset($_GET['id'])) {
-            $sql = $pdo->prepare("SELECT * FROM masc WHERE id=:id");
-            $sql->bindValue(':id', $_GET['id']);
-        } else {
-            $sql = $pdo->prepare("SELECT * FROM masc");
-        }
-    
+        
+        $sql = $pdo->prepare("SELECT * FROM masc");
         $sql->execute();
         $sql->setFetchMode(PDO::FETCH_ASSOC);
         return $sql->fetchAll();
