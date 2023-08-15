@@ -1,5 +1,6 @@
 $(document).ready(function() {
    listar();
+
 });
 
 function listar() {
@@ -59,6 +60,7 @@ $(document).on("click", ".eliminar", function () {
 });
 
 
+
    
 $(".actualizar").click(function() {
         var formData = $("#formulario").serialize();
@@ -67,12 +69,12 @@ $(".actualizar").click(function() {
             type: "POST",
             data: formData,
         })
-        location.reload();    
+        location.reload();
     });
 
 
 $(".guardar").click(function() {
-        $("#formulario input[name='datoExcluir']").prop("disabled", true);
+        $("#formulario input[name='id']").prop("disabled", true);
         var formData = $("#formulario").serialize();
         $.ajax({
             url: "../Controlador/appController.php",

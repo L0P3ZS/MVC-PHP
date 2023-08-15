@@ -30,7 +30,7 @@
                 <div class="modal-body">
                     <form method="POST" id="formulario">
                     <div class="modal-data">
-                            <input type="hidden"   name="datoExcluir" id="id" name="id" >
+                            <input type="hidden"   id="id" name="id" >
                         </div>
                         <div class="modal-data">
                             <label for="name">Nombre:</label>
